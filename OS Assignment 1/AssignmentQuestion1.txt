@@ -1,0 +1,215 @@
+Welcome to Ubuntu 22.04.3 LTS (GNU/Linux 5.15.133.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+
+This message is shown once a day. To disable it please create the
+/home/kashmira/.hushlogin file.
+kashmira@DESKTOP-4689QB2:~$ mkdir LinuxAssign
+kashmira@DESKTOP-4689QB2:~$ cd LinuxAssign
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cat > file.txt
+Hallo Kashmira
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ mkdir docs
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cp file.txt docs
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cd docs
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ ls
+file.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ mv file.txt file1.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ ls
+file1.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ chmod 744 file1.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ ls -l -a
+total 12
+drwxr-xr-x 2 kashmira kashmira 4096 Mar  8 22:34 .
+drwxr-xr-x 3 kashmira kashmira 4096 Mar  8 22:33 ..
+-rwxr--r-- 1 kashmira kashmira   15 Mar  8 22:34 file1.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ ls -l
+total 4
+-rwxr--r-- 1 kashmira kashmira 15 Mar  8 22:34 file1.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ cd ..
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ls
+docs  file.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ls /
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ls / *.txt
+file.txt
+
+/:
+bin  boot  dev  etc  home  init  lib  lib32  lib64  libx32  lost+found  media  mnt  opt  proc  root  run  sbin  snap  srv  sys  tmp  usr  var
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cd docs
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ grep "Hallo" file1.txt
+Hallo Kashmira
+kashmira@DESKTOP-4689QB2:~/LinuxAssign/docs$ cd ..
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ grep "Hallo" file.txt
+Hallo Kashmira
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ date
+Fri Mar  8 22:41:32 IST 2024
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ifconfig
+Command 'ifconfig' not found, but can be installed with:
+sudo apt install net-tools
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ sudo apt install net-tools
+[sudo] password for kashmira:
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following NEW packages will be installed:
+  net-tools
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 204 kB of archives.
+After this operation, 819 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu jammy/main amd64 net-tools amd64 1.60+git20181103.0eebece-1ubuntu5 [204 kB]
+Fetched 204 kB in 10s (20.6 kB/s)
+Selecting previously unselected package net-tools.
+(Reading database ... 24208 files and directories currently installed.)
+Preparing to unpack .../net-tools_1.60+git20181103.0eebece-1ubuntu5_amd64.deb ...
+Unpacking net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Setting up net-tools (1.60+git20181103.0eebece-1ubuntu5) ...
+Processing triggers for man-db (2.10.2-1) ...
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ifconfig
+eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1300
+        inet 172.31.129.34  netmask 255.255.240.0  broadcast 172.31.143.255
+        inet6 fe80::215:5dff:febf:2319  prefixlen 64  scopeid 0x20<link>
+        ether 00:15:5d:bf:23:19  txqueuelen 1000  (Ethernet)
+        RX packets 239  bytes 233878 (233.8 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 121  bytes 10670 (10.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 0  bytes 0 (0.0 B)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 0  bytes 0 (0.0 B)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ping 127.0.0.1
+PING 127.0.0.1 (127.0.0.1) 56(84) bytes of data.
+64 bytes from 127.0.0.1: icmp_seq=1 ttl=64 time=0.204 ms
+64 bytes from 127.0.0.1: icmp_seq=2 ttl=64 time=0.076 ms
+64 bytes from 127.0.0.1: icmp_seq=3 ttl=64 time=0.111 ms
+64 bytes from 127.0.0.1: icmp_seq=4 ttl=64 time=0.103 ms
+64 bytes from 127.0.0.1: icmp_seq=5 ttl=64 time=0.073 ms
+64 bytes from 127.0.0.1: icmp_seq=6 ttl=64 time=0.065 ms
+64 bytes from 127.0.0.1: icmp_seq=7 ttl=64 time=0.079 ms
+64 bytes from 127.0.0.1: icmp_seq=8 ttl=64 time=0.084 ms
+64 bytes from 127.0.0.1: icmp_seq=9 ttl=64 time=0.083 ms
+64 bytes from 127.0.0.1: icmp_seq=10 ttl=64 time=0.107 ms
+64 bytes from 127.0.0.1: icmp_seq=11 ttl=64 time=0.108 ms
+64 bytes from 127.0.0.1: icmp_seq=12 ttl=64 time=0.093 ms
+64 bytes from 127.0.0.1: icmp_seq=13 ttl=64 time=0.085 ms
+64 bytes from 127.0.0.1: icmp_seq=14 ttl=64 time=0.117 ms
+64 bytes from 127.0.0.1: icmp_seq=15 ttl=64 time=0.108 ms
+64 bytes from 127.0.0.1: icmp_seq=16 ttl=64 time=0.254 ms
+64 bytes from 127.0.0.1: icmp_seq=17 ttl=64 time=0.105 ms
+64 bytes from 127.0.0.1: icmp_seq=18 ttl=64 time=0.099 ms
+64 bytes from 127.0.0.1: icmp_seq=19 ttl=64 time=0.105 ms
+64 bytes from 127.0.0.1: icmp_seq=20 ttl=64 time=0.220 ms
+64 bytes from 127.0.0.1: icmp_seq=21 ttl=64 time=0.113 ms
+64 bytes from 127.0.0.1: icmp_seq=22 ttl=64 time=0.099 ms
+64 bytes from 127.0.0.1: icmp_seq=23 ttl=64 time=0.203 ms
+64 bytes from 127.0.0.1: icmp_seq=24 ttl=64 time=0.078 ms
+64 bytes from 127.0.0.1: icmp_seq=25 ttl=64 time=0.176 ms
+64 bytes from 127.0.0.1: icmp_seq=26 ttl=64 time=0.076 ms
+64 bytes from 127.0.0.1: icmp_seq=27 ttl=64 time=0.096 ms
+64 bytes from 127.0.0.1: icmp_seq=28 ttl=64 time=0.224 ms
+64 bytes from 127.0.0.1: icmp_seq=29 ttl=64 time=0.078 ms
+64 bytes from 127.0.0.1: icmp_seq=30 ttl=64 time=0.109 ms
+64 bytes from 127.0.0.1: icmp_seq=31 ttl=64 time=0.240 ms
+64 bytes from 127.0.0.1: icmp_seq=32 ttl=64 time=0.108 ms
+64 bytes from 127.0.0.1: icmp_seq=33 ttl=64 time=0.312 ms
+64 bytes from 127.0.0.1: icmp_seq=34 ttl=64 time=0.225 ms
+64 bytes from 127.0.0.1: icmp_seq=35 ttl=64 time=0.091 ms
+64 bytes from 127.0.0.1: icmp_seq=36 ttl=64 time=0.103 ms
+64 bytes from 127.0.0.1: icmp_seq=37 ttl=64 time=0.175 ms
+64 bytes from 127.0.0.1: icmp_seq=38 ttl=64 time=0.208 ms
+64 bytes from 127.0.0.1: icmp_seq=39 ttl=64 time=0.125 ms
+64 bytes from 127.0.0.1: icmp_seq=40 ttl=64 time=0.128 ms
+64 bytes from 127.0.0.1: icmp_seq=41 ttl=64 time=0.130 ms
+64 bytes from 127.0.0.1: icmp_seq=42 ttl=64 time=0.104 ms
+64 bytes from 127.0.0.1: icmp_seq=43 ttl=64 time=0.076 ms
+64 bytes from 127.0.0.1: icmp_seq=44 ttl=64 time=0.082 ms
+64 bytes from 127.0.0.1: icmp_seq=45 ttl=64 time=0.131 ms
+64 bytes from 127.0.0.1: icmp_seq=46 ttl=64 time=0.186 ms
+64 bytes from 127.0.0.1: icmp_seq=47 ttl=64 time=0.099 ms
+64 bytes from 127.0.0.1: icmp_seq=48 ttl=64 time=0.111 ms
+^C
+--- 127.0.0.1 ping statistics ---
+48 packets transmitted, 48 received, 0% packet loss, time 48897ms
+rtt min/avg/max/mdev = 0.065/0.128/0.312/0.057 ms
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ zip -r docs1.zip docs
+Command 'zip' not found, but can be installed with:
+sudo apt install zip
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ sudo apt install zip
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  unzip
+The following NEW packages will be installed:
+  unzip zip
+0 upgraded, 2 newly installed, 0 to remove and 0 not upgraded.
+Need to get 350 kB of archives.
+After this operation, 929 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://archive.ubuntu.com/ubuntu jammy-updates/main amd64 unzip amd64 6.0-26ubuntu3.1 [174 kB]
+Get:2 http://archive.ubuntu.com/ubuntu jammy/main amd64 zip amd64 3.0-12build2 [176 kB]
+Fetched 350 kB in 10s (33.9 kB/s)
+Selecting previously unselected package unzip.
+(Reading database ... 24257 files and directories currently installed.)
+Preparing to unpack .../unzip_6.0-26ubuntu3.1_amd64.deb ...
+Unpacking unzip (6.0-26ubuntu3.1) ...
+Selecting previously unselected package zip.
+Preparing to unpack .../zip_3.0-12build2_amd64.deb ...
+Unpacking zip (3.0-12build2) ...
+Setting up unzip (6.0-26ubuntu3.1) ...
+Setting up zip (3.0-12build2) ...
+Processing triggers for man-db (2.10.2-1) ...
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ zip -r docs1.zip docs
+  adding: docs/ (stored 0%)
+  adding: docs/file1.txt (stored 0%)
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ ls
+docs  docs1.zip  file.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ mkdir newdir
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ unzip
+UnZip 6.00 of 20 April 2009, by Debian. Original by Info-ZIP.
+
+Usage: unzip [-Z] [-opts[modifiers]] file[.zip] [list] [-x xlist] [-d exdir]
+  Default action is to extract files in list, except those in xlist, to exdir;
+  file[.zip] may be a wildcard.  -Z => ZipInfo mode ("unzip -Z" for usage).
+
+  -p  extract files to pipe, no messages     -l  list files (short format)
+  -f  freshen existing files, create none    -t  test compressed archive data
+  -u  update files, create if necessary      -z  display archive comment only
+  -v  list verbosely/show version info       -T  timestamp archive to latest
+  -x  exclude files that follow (in xlist)   -d  extract files into exdir
+modifiers:
+  -n  never overwrite existing files         -q  quiet mode (-qq => quieter)
+  -o  overwrite files WITHOUT prompting      -a  auto-convert any text files
+  -j  junk paths (do not make directories)   -aa treat ALL files as text
+  -U  use escapes for all non-ASCII Unicode  -UU ignore any Unicode fields
+  -C  match filenames case-insensitively     -L  make (some) names lowercase
+  -X  restore UID/GID info                   -V  retain VMS version numbers
+  -K  keep setuid/setgid/tacky permissions   -M  pipe through "more" pager
+  -O CHARSET  specify a character encoding for DOS, Windows and OS/2 archives
+  -I CHARSET  specify a character encoding for UNIX and other archives
+
+See "unzip -hh" or unzip.txt for more help.  Examples:
+  unzip data1 -x joe   => extract all files except joe from zipfile data1.zip
+  unzip -p foo | more  => send contents of foo.zip via pipe into program more
+  unzip -fo foo ReadMe => quietly replace existing ReadMe if archive file newer
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ vi file.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cat file.txt
+Hallo Kashmira
+echo " meera"
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ sed -i 's/Meera/Kashmira/g' file.txt
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$ cat file.txt
+Hallo Kashmira
+echo " meera"
+kashmira@DESKTOP-4689QB2:~/LinuxAssign$
+
+
